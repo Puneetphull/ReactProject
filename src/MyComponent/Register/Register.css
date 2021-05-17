@@ -1,0 +1,17 @@
+.App-header {
+    background-color: #6872ff;
+    min-height: 90.5vh;
+    display: flex;;
+  }
+  
+  .LoginCard{
+    width: 60%;
+    height: 90%;
+    margin-top: 110px;
+    margin-left: 250px;
+  }
+  h1{
+    text-align:"center";
+    color:"blue";
+    font-family:"cursive";
+  }
