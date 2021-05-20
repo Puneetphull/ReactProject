@@ -24,7 +24,7 @@ export default function Register() {
   <br></br>
   <br></br>
   </Card>
-
+  
 </header>
 </div>
 );
