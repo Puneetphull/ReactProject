@@ -9,9 +9,11 @@ import Paper from '@material-ui/core/Paper';
 
 export default class employeestile extends Component { 
     render(){      
+     const arrar = [this.props.data];
         return (
             <div>
             <TableContainer component={Paper}>
+             
       <Table style={{minWidth:"650"}} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -21,15 +23,31 @@ export default class employeestile extends Component {
           </TableRow>
         </TableHead>
         <TableBody>
-            <TableRow >
-              <TableCell component="th" scope="row">{this.props.data.id}
+            <TableRow  >
+              <TableCell component="th" scope="row">{arrar.map((details)=>{
+               return (
+                 <div>{details.id}</div>
+               )
+              })}
               </TableCell>
-              <TableCell align="right">{this.props.data.name}</TableCell>
-              <TableCell align="right">{this.props.data.age}</TableCell>
+              <TableCell align="right">{arrar.map((details)=>{
+               return (
+                 <div>{details.name}</div>
+               )
+              })}</TableCell>
+              <TableCell align="right">{arrar.map((details)=>{
+               return (
+                 <div>{details.age}</div>
+               )
+              })}</TableCell>
             </TableRow>
         </TableBody>
       </Table>
     </TableContainer>
+    
+
+
+
             </div>
         )
     }

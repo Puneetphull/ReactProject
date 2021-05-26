@@ -16,7 +16,7 @@ export default class login extends Component {
             passworderror:'',
     
            } 
-         }
+                 }
 
          
          //validation code 

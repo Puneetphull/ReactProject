@@ -2,11 +2,19 @@ import Header from './MyComponent/Header/Header';
 //import Register from './MyComponent/Register/Register';
 //import Login from './MyComponent/Login/login';
 //import {BrowserRouter as Router ,Route,Link} from 'react-router-dom';
-import Employeesdata from './MyComponent/Props/employeesdata';
+//import Employeesdata from './MyComponent/Props/employeesdata';
+import Newemployee from './MyComponent/Usestate/useform/NewEmployee';
+import Employeefilter from './MyComponent/Usestate/Assigment2/Employeefilter';
+import React,{useState} from 'react';
 import './App.css';
 function App() {
+  const [value,setvalue] = useState('');
+  const  handlecallback = (event)=>{
+        setvalue({value:event});
+        console.log(value);
+        }
 
-  const employees = [
+ /**  const employees = [
     {
       id: 'e1',
       name: 'Akhil',
@@ -38,14 +46,18 @@ function App() {
       age: 25
     },
   ];
-  return (
+  */
+  return (  
    <>
-   <Header/>
-   < Employeesdata data={employees} />
+       <Header/>
+  <Newemployee value = {handlecallback}/>
+  <br></br>
+<Employeefilter/>
     
     </>
   )
 }
+
 export default App;
 
 
