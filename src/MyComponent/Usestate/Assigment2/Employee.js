@@ -2,26 +2,30 @@ import React ,{useState} from 'react';
 
 export default function Employee(props) {
     const  [age,setage] = useState(''); 
-    function  submit(){
+    function  submit(e){
+      e.preventDefault();
         props.value(age)
     }
+    const array = [1,2,3,4,5,6,7,8,10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+      20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+      30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+      40, 41, 42, 43, 44, 45, 46, 47, 48, 49,
+      50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
+      60, 61, 62, 63, 64, 65, 66, 67, 68, 69,
+      70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
+      80, 81, 82, 83, 84, 85, 86, 87, 88, 89,
+      90, 91, 92, 93, 94, 95, 96, 97, 98, 99,
+      100];
     return (
         <div>
             <div class="input-group mb-3">
   <div class="input-group-prepend">
     <button onClick={submit} class="btn btn-outline-secondary" type="Button">Button</button>
   </div>
-  <select class="custom-select" id="inputGroupSelect03" value={age} onChange={e=> setage(e.target.value)}>
-    <option   selected>Choose...</option>
-    <option value="1">One</option>
-    <option value="2" >Two</option>
-    <option value="3" >Three</option>
-    <option value="4">Four</option>
-    <option value="5">Five</option>
-    <option value="6">Six</option>
-    <option value="7">Seven</option>
-    <option value="8">Eight</option>
-    </select>
+  
+  <select class="custom-select" id="inputGroupSelect03" value={age}  onChange={e=> setage(e.target.value)}>
+                {array.map((item, index) => <option key={index} value={item}>{item}</option>)}
+            </select>
       </div>
         </div>
     )
