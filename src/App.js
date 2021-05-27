@@ -5,55 +5,59 @@ import Header from './MyComponent/Header/Header';
 //import Employeesdata from './MyComponent/Props/employeesdata';
 import Newemployee from './MyComponent/Usestate/useform/NewEmployee';
 import Employeefilter from './MyComponent/Usestate/Assigment2/Employeefilter';
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 function App() {
-  const [value,setvalue] = useState('');
-  const  handlecallback = (event)=>{
-        setvalue({value:event});
-        console.log(value);
-        }
+  // const [value,setvalue] = useState('');
+  // const  handlecallback = (event)=>{
+  //       setvalue({value:event});
+  //       console.log(value);
+  //       }
 
- /**  const employees = [
-    {
-      id: 'e1',
-      name: 'Akhil',
-      age: 20
-    },
-    {
-      id: 'e2',
-      name: 'Aman',
-      age: 21
-    },
-  {
-      id: 'e3',
-      name: 'Vikas',
-      age: 22
-    },
-  {
-      id: 'e4',
-      name: 'Harminder',
-      age: 23
-    },
-  {
-      id: 'e5',
-      name: 'Deeksha',
-      age: 24
-    },
-  {
-      id: 'e6',
-      name: 'Puneet',
-      age: 25
-    },
-  ];
-  */
-  return (  
-   <>
-       <Header/>
-  <Newemployee value = {handlecallback}/>
-  <br></br>
-<Employeefilter/>
-    
+  /**  const employees = [
+     {
+       id: 'e1',
+       name: 'Akhil',
+       age: 20
+     },
+     {
+       id: 'e2',
+       name: 'Aman',
+       age: 21
+     },
+   {
+       id: 'e3',
+       name: 'Vikas',
+       age: 22
+     },
+   {
+       id: 'e4',
+       name: 'Harminder',
+       age: 23
+     },
+   {
+       id: 'e5',
+       name: 'Deeksha',
+       age: 24
+     },
+   {
+       id: 'e6',
+       name: 'Puneet',
+       age: 25
+     },
+   ];
+   */
+
+  const saveDetails = (val) => {
+    console.log(val)
+  }
+  return (
+    <>
+      <Header />
+      <Newemployee saveDetails={saveDetails} />
+      <br></br>
+      <Employeefilter />
+
     </>
   )
 }

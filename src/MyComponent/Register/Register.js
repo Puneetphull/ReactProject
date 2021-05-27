@@ -21,7 +21,7 @@ export default function Register() {
       'password':password,
       'confirmpassword':confirmpassword
     }
-    console.log(details)
+  //  console.log(details)
   }
     return ( 
 <div className="App">

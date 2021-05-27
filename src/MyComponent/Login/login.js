@@ -47,7 +47,7 @@ export default class login extends Component {
         if(this.valid()){
             this.setState({Emailerror:"",passworderror:""});
          alert("check the console.log");
-         console.log(this.state);
+       //  console.log(this.state);
         }         
         }
     render() {

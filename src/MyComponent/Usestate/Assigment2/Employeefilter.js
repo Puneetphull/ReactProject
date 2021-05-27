@@ -6,7 +6,7 @@ export default function Employeefilter() {
     const handlecallback = (event) =>{
         setage({age:event});
     }
-    console.log(age);
+    //console.log(age);
     return (
         <div>
             <Employee value={handlecallback}/>
