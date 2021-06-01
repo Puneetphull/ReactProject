@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Employeeform from './Employeeform';
 
 export default function NewEmployee(props) {

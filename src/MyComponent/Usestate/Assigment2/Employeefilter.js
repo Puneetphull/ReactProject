@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import Employee from './Employee';
-export default function Employeefilter() {
-    const [age,setage] = useState('');
+export default function Employeefilter(props) {
+  /*  const [age,setage] = useState('');
 
     const handlecallback = (event) =>{
         setage({age:event});
-    }
+    }*/
     //console.log(age);
     return (
         <div>
-            <Employee value={handlecallback}/>
-        </div>
+        <Employee SaveAge = {props.SaveAge} />
+    </div>
     )
 }
