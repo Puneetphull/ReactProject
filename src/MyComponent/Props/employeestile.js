@@ -18,12 +18,10 @@ export default function  Employeestile(props){
  else if(age === 'all'){
    return [props.data];
  }
-
 })
     return (
    <div>
-            <TableContainer component={Paper}>
-             
+      <TableContainer component={Paper}>        
       <Table style={{minWidth:"650"}} aria-label="simple table">
         <TableHead>
           <TableRow>

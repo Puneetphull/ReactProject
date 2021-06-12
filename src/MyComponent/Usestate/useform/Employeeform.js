@@ -7,6 +7,7 @@ export default function Employeeform(props) {
     age: "",
    
   })
+  
 
   const handlenamechange = (event) => {
     setvalues({ ...values, name: event.target.value })
@@ -16,19 +17,18 @@ export default function Employeeform(props) {
   }
   function submit(e) {
     e.preventDefault();
-    console.log(values)
     props.saveDetails({
       ...values,
       id: Math.random().toString().substr(2,5)
     });
+    setvalues({age:'',name:''})
   }
-
   return (
     <form onSubmit={submit} className={style.form}>
       <h1>Callback Props</h1>
       <div class="form-group">
         <label for="exampleInputName1">Name</label>
-        <input type="text" class="form-control" id="exampleInputName1" placeholder="Name" value={values.Name} onChange={handlenamechange} />
+        <input type="text" class="form-control" id="exampleInputName1" placeholder="Name" value={values.name} onChange={handlenamechange} />
       </div>
       <div class="form-group">
         <label for="exampleInputAge1">Age</label>
